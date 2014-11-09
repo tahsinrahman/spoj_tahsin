@@ -1,3 +1,14 @@
+/*
+http://www.spoj.com/problems/TWOSQRS/
+
+http://en.wikipedia.org/wiki/Fermat%27s_theorem_on_sums_of_two_squares
+http://en.wikipedia.org/wiki/Brahmagupta%E2%80%93Fibonacci_identity
+http://en.wikipedia.org/wiki/Pythagorean_prime
+http://pag.sdslabs.co/blog/2014/01/31/spoj-twosqrs/
+*/
+
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -31,9 +42,9 @@ bool check(long long n)
 			n /= primes[i];
 			c++;
 		}
-		cout << primes[i] << ' ' << c << endl;
 		if(c&1) return 0;
 	}
+	if(n > 1 && n%4 == 3) return 0;
 	return 1;
 }
 
